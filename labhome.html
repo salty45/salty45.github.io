@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com">
+<body>
+
+<!-- Sticky Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">LOGO</a>
+    <!-- w3-mobile makes these links stack on small screens -->
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Link 2</a>
+    
+    <!-- Optional: Hamburger menu for mobile -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleFunction()">&#9776;</a>
+  </div>
+
+  <!-- Hidden navbar on small screens (menu content) -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+  </div>
+</div>
+
+<!-- Page Content (add padding top to prevent content being hidden) -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <div class="w3-container w3-padding-64">
+    <h1>Sticky Header Example</h1>
+    <p>Scroll down to see the effect.</p>
+  </div>
+</div>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
